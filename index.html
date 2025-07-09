@@ -11,18 +11,10 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="icon">
-    <input type="checkbox">
-    <label class="hamburger-bar">
-        <i class="fa-solid fa-bars"></i>
-    </label>
-    <label class="hamburger-xmark">
-        <i class="fa-solid fa-xmark"></i>
-    </label>
-</div>
-    <div class="Navigation-item rubik">
-        <!-- <span class="tooltip-text">Here is everything I have built</span> -->
-        <ul>
+    <ul class="Navigation-item rubik">
+        <li class='logo'><a href='#'><img src='/logo.png'/></a></li>
+        <input id="check" type="checkbox">
+        <span  class="menu">
             <li>Home</li>
             <li class="tooltip">
                 <span class="tooltip-text">Here is everything I have built</span>
@@ -30,7 +22,9 @@
                 Projects
             </li>
             <li>Blog</li>
-        </ul>
-    </div>
+        </span>
+        <label for="check" class="hamburger-bar"><i class="fa-solid fa-bars"></i></label>
+        <label for="check" class="hamburger-xmark"><i class="fa-solid fa-xmark"></i></label>
+    </ul>
 </body>
 </html>

@@ -11,6 +11,24 @@ body{
     display: inline-flex;
     justify-content: center;
     gap: 64px;
+    width: 80%;
+    height: 100vh;
+    top: 0;
+    right: -100%;
+    background-color: black;
+    transition: all 0.2s ease-in-out;
+    z-index: 100;
+    position: fixed;
+}
+.Navigation-item ul::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1%;
+    background-color: white;
+    transition: 0.50s ease-in-out;
 }
 li{
     font-size: 30px;
@@ -79,42 +97,78 @@ li{
 li::marker{
     color: #afafaf;
 }
+.icon{
+    position: relative;
+}
+.hamburger-bar , .hamburger-xmark {
+    position: absolute;
+    cursor: pointer;
+    display: none;
+    color: white
+}
+
+.hamburger-bar{
+    right: 4%;
+    transform: translateY(-47%);
+    
+}
+input{
+    display: none;
+}
+
+.hamburger-xmark {
+    top: 8px;
+    right: 4%;
+}
 @media screen and (max-width:767px) {
     body{
+        padding: 0;
+    }
+    .icon{
         padding: 22px;
-        padding-left: 16em;
-        position: absolute;
+        padding-left: 16.3em;
+        position: relative;
+        width: 34%;
+        background-color: #000000;
     }
     .Navigation-item ul{
         flex-direction: column;
         list-style-type: none;
+        text-align: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        top: 0;
+        right: -100%;
+        background-color: #000000;
+        transition: all 1s ease;
+        z-index: 100;
+        position: fixed;
     }
     .fa-bars{
-        font-size: 2em;
-        position: relative;
-        left: 53%;
-        bottom: 39%;
+        font-size: 1.4em;
     }
     .fa-xmark{
-        font-size: 2em;
-        position: relative;
-        left: 32%;
-        bottom: 39%;
+        font-size: 1.7em;
     }
     .tooltip-text{
         width: 0;
         display: block;
     }
     .tooltip:hover .tooltip-text{
-        opacity: 0;
+        display: none;
     }
     .tooltip:hover .triangle-border{
-        opacity: 0;
+        display: none;
     }
     input{
-        font-size: 2em;
         position: relative;
-        left: 32%;
-        bottom: 39%;
+        left: 10.6em;
+        display: none;
+        z-index: 1;
+        margin-top: 8px;
+    }
+    .hamburger-xmark, .hamburger-bar{
+        display: block;
     }
 }

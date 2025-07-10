@@ -4,27 +4,30 @@
     box-sizing: content-box;
 }
 body{
-    padding-top: 160px;
+    /* padding-top: 160px; */
     text-align: center;
 }
 .Navigation-item{
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    list-style: none;
-    position: relative;
+    /* list-style: none; */
+    /* position: relative; */
     background-color: black;
-    padding: 12px 20px;
+    /* padding: 12px 20px; */
 }
 .logo img{
-    width: 40px;
+    width: 34%;
+    padding-top: 10px;    
+    position: relative;
+    right: 30%;
 }
 .menu{
     display: inline-flex;
     justify-content: center;
     gap: 64px;
-    width: 80%;
+    width: 100%;
     top: 0;
     right: -100%;
     transition: all 0.2s ease-in-out;
@@ -41,7 +44,7 @@ body{
 }
 li{
     font-size: 30px;
-    color: rgb(5, 0, 0);  
+    color: rgb(255, 255, 255);  
 }
 .menu li:not(:last-child)::after{
     color: gray;
@@ -61,27 +64,91 @@ li{
     background: black;
     color: white;
     border-radius: 20px;
-    height: 20px;
-    padding: 20px 26px 32px;
+    height: 14px;
+    padding: 20px 26px 18px 0px;
     overflow: hidden;
     opacity: 0;
     text-align: center;
     position: absolute;
-    bottom: 212%;
-    left: -57%;
+    bottom: -6.6em;
+    left: -38%;
     transition: opacity 0.3s;
     transform: translateX(-18%);
     width: 14em;
+    font-size: 14px;
+    transition: opacity 0.3s ease;
 }
 .triangle-border{
     width: 0;
     height: 0;
     border-left: 21px solid transparent;
     border-right: 19px solid transparent;
-    border-top: 16px solid #000000;
+    border-bottom: 16px solid #000000;
     margin-left: 30px;
     position: absolute;
-    top: -112%;
+    top: 172%;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.tooltip-text-second{
+    background: black;
+    color: white;
+    border-radius: 20px;
+    height: 14px;
+    padding: 20px 26px 18px 0px;
+    overflow: hidden;
+    opacity: 0;
+    text-align: center;
+    position: absolute;
+    bottom: -6.6em;
+    left: -8%;
+    transition: opacity 0.3s;
+    transform: translateX(-18%);
+    width: 14em;
+    font-size: 14px;
+    transition: opacity 0.3s ease;
+}
+.triangle-border-second{
+    width: 0;
+    height: 0;
+    border-left: 21px solid transparent;
+    border-right: 19px solid transparent;
+    border-bottom: 16px solid #000000;
+    margin-left: 30px;
+    position: absolute;
+    top: 172%;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.tooltip-text-third{
+    background: black;
+    color: white;
+    border-radius: 20px;
+    height: 14px;
+    padding: 20px 12px 18px 0px;
+    overflow: hidden;
+    opacity: 0;
+    text-align: center;
+    position: absolute;
+    bottom: -6.6em;
+    left: -114%;
+    transition: opacity 0.3s;
+    transform: translateX(-18%);
+    width: 14em;
+    font-size: 14px;
+    transition: opacity 0.3s ease;
+}
+.triangle-border-third{
+    width: 0;
+    height: 0;
+    border-left: 21px solid transparent;
+    border-right: 19px solid transparent;
+    border-bottom: 16px solid #000000;
+    margin-left: 16px;
+    position: absolute;
+    top: 172%;
     overflow: hidden;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -94,6 +161,22 @@ li{
     visibility: visible;
 }
 .tooltip:hover .triangle-border{
+    opacity: 1;
+    visibility: visible;
+}
+.tooltip:hover .tooltip-text-second{
+    opacity: 1;
+    visibility: visible;
+}
+.tooltip:hover .triangle-border-second{
+    opacity: 1;
+    visibility: visible;
+}
+.tooltip:hover .tooltip-text-third{
+    opacity: 1;
+    visibility: visible;
+}
+.tooltip:hover .triangle-border-third{
     opacity: 1;
     visibility: visible;
 }
@@ -118,18 +201,18 @@ li::marker{
 .hamburger-bar{
     right: 4%;
     /* transform: translateY(-47%); */
-    top: 22px;
+    top: 16px;
 }
 #check{
     display: none;
 }
 
 .hamburger-xmark {
-    top: 18px;
+    top: 14px;
     right: 4%;
     opacity: 0;
 }
-@media screen and (max-width:767px) {
+@media screen and (max-width:1023px) {
     body{
         padding: 0;
     }
@@ -143,10 +226,11 @@ li::marker{
     .menu{
         flex-direction: column;
         align-items: center;
+        justify-content: flex-start;
         width: 100%;
         height: 100vh;
         position: fixed;
-        top: 65px;
+        top: 50px;
         right: -100%;
         z-index: 100;
         background-color: black;
@@ -162,17 +246,27 @@ li::marker{
     .tooltip-text{
         display: block;
     }
-    .tooltip:hover .tooltip-text{
+    /* .tooltip:hover .tooltip-text{
         display: none;
     }
     .tooltip:hover .triangle-border{
         display: none;
-    }
+    } */
     input{
         position: relative;
         left: 14.2em;
         display: none;
         z-index: 1;
+    }
+    .Navigation-item{
+        /* width: 95%; */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style: none;
+        position: relative;
+        background-color: black;
+        padding: 12px 20px;
     }
     .menu :nth-child(3){
         padding-left: 0;
@@ -193,5 +287,87 @@ li::marker{
     }
     #check:checked ~ .menu{
         right: 0;
+    }
+    .logo img{
+        display: block;
+        padding-top: 0;
+        position: static;
+    }
+    .menu :nth-child(3){
+        padding-left: 0;
+    }
+    .menu :nth-last-child(2){
+        padding-left: 0;
+    }
+    .menu li:nth-child(1){
+        margin-top: 48px;
+    }
+    .tooltip-text{
+        background: #ffffff;
+        color: #000000;
+        height: 11px;
+        padding: 7px 0px 16px 0px;
+        bottom: 152%;
+        left: 50%;
+        width: 16em;
+        font-size: 16px;
+    }
+    .triangle-border{
+        border-left: 14px solid transparent;
+        border-right: 14px solid transparent;
+        border-top: 16px solid #ffffff;
+        top: -54%;
+    }
+    .tooltip-text-second{
+        background: #ffffff;
+        color: #000000;
+        height: 11px;
+        padding: 7px 0px 16px 0px;
+        bottom: 152%;
+        left: 50%;
+        width: 16em;
+        font-size: 16px;
+    }
+    .triangle-border-second{
+        border-left: 14px solid transparent;
+        border-right: 14px solid transparent;
+        border-top: 16px solid #ffffff;
+        top: -54%;
+    }
+    .tooltip-text-third{
+        background: #ffffff;
+        color: #000000;
+        height: 11px;
+        padding: 7px 0px 16px 0px;
+        bottom: 152%;
+        left: 50%;
+        width: 16em;
+        font-size: 16px;
+    }
+    .triangle-border-third{
+        border-left: 14px solid transparent;
+        border-right: 14px solid transparent;
+        border-top: 16px solid #ffffff;
+        top: -54%;
+    }
+}
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .hamburger-bar{
+        right: 4%;
+        top: 26%;
+    }
+    .hamburger-xmark {
+        top: 30%;
+        right: 4%;
+        opacity: 0;
+    }
+    .fa-bars{
+        font-size: 2em;
+    }
+    .fa-xmark{
+        font-size: 2.4em;
+    }
+    .menu{
+        top:75px;
     }
 }

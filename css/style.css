@@ -17,17 +17,17 @@ body{
     background-color: black;
     padding: 12px 20px;
 }
-/* .logo{
+.logo{
     max-width: 20%;
-} */
-/* .logo img{
+}
+.logo img{
     width: 100%;
     padding-top: 10px;    
-} */
-.logo img{
+}
+/* .logo img{
     width: 34%;
     padding-top: 10px;    
-}
+} */
 .menu{
     display: inline-flex;
     justify-content: center;

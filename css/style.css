@@ -21,7 +21,7 @@ body{
     max-width: 20%;
 }
 .logo img{
-    width: 100%;
+    width: 74%;
     padding-top: 10px;    
 }
 /* .logo img{
@@ -62,25 +62,36 @@ li{
     font-style: normal;
 }
 .tooltip{
-   cursor: pointer;
    position: relative;
+}
+ .tooltip p{
+    cursor: pointer;
+    /* position: relative; */
+}
+.hover-tooltip{
+    opacity: 0;
+}
+.hover-tooltip :nth-child(3){
+    padding-left: 14px !important;
+}
+.hover-tooltip :nth-last-child(2){
+    padding-left: 14px !important;
 }
 .tooltip-text{
     background: black;
     color: white;
     border-radius: 20px;
-    height: 14px;
-    padding: 20px 26px 18px 0px;
+    height: 26px;
+    padding: 10px;
     overflow: hidden;
-    opacity: 0;
     text-align: center;
     position: absolute;
-    bottom: -7.5em;
+    bottom: -4.3em;
     left: -38%;
     transition: opacity 0.3s;
     transform: translateX(-18%);
     width: 14em;
-    font-size: 14px;
+    font-size: 23px;
     transition: opacity 0.3s ease;
 }
 .triangle-border{
@@ -89,29 +100,27 @@ li{
     border-left: 21px solid transparent;
     border-right: 19px solid transparent;
     border-bottom: 16px solid #000000;
-    margin-left: 30px;
+    margin-left: 40px;
     position: absolute;
     top: 204%;
     overflow: hidden;
-    opacity: 0;
     transition: opacity 0.3s ease;
 }
 .tooltip-text-second{
     background: black;
     color: white;
     border-radius: 20px;
-    height: 14px;
-    padding: 20px 26px 18px 0px;
+    height: 26px;
+    padding: 10px;
     overflow: hidden;
-    opacity: 0;
     text-align: center;
     position: absolute;
-    bottom: -7.5em;
+    bottom: -4.3em;
     left: -8%;
     transition: opacity 0.3s;
     transform: translateX(-18%);
     width: 14em;
-    font-size: 14px;
+    font-size: 23px;
     transition: opacity 0.3s ease;
 }
 .triangle-border-second{
@@ -120,29 +129,27 @@ li{
     border-left: 21px solid transparent;
     border-right: 19px solid transparent;
     border-bottom: 16px solid #000000;
-    margin-left: 30px;
+    margin-left: 40px;
     position: absolute;
     top: 204%;
     overflow: hidden;
-    opacity: 0;
     transition: opacity 0.3s ease;
 }
 .tooltip-text-third{
     background: black;
     color: white;
     border-radius: 20px;
-    height: 14px;
-    padding: 20px 12px 18px 0px;
+    height: 26px;
+    padding: 10px;
     overflow: hidden;
-    opacity: 0;
     text-align: center;
     position: absolute;
-    bottom: -7.5em;
-    left: -28%;
+    bottom: -4.3em;
+    left: -113%;
     transition: opacity 0.3s;
     transform: translateX(-18%);
     width: 14em;
-    font-size: 14px;
+    font-size: 23px;
     transition: opacity 0.3s ease;
 }
 .triangle-border-third{
@@ -151,11 +158,10 @@ li{
     border-left: 21px solid transparent;
     border-right: 19px solid transparent;
     border-bottom: 16px solid #000000;
-    margin-left: 16px;
+    margin-left: 40px;
     position: absolute;
     top: 204%;
     overflow: hidden;
-    opacity: 0;
     transition: opacity 0.3s ease;
 }
 .Navigation-item :nth-child(1){
@@ -164,29 +170,8 @@ li{
 .menu :nth-child(1){
     list-style: none;
 }
-.tooltip:hover .tooltip-text{
+.menu-text:hover ~ .hover-tooltip{
     opacity: 1;
-    visibility: visible;
-}
-.tooltip:hover .triangle-border{
-    opacity: 1;
-    visibility: visible;
-}
-.tooltip:hover .tooltip-text-second{
-    opacity: 1;
-    visibility: visible;
-}
-.tooltip:hover .triangle-border-second{
-    opacity: 1;
-    visibility: visible;
-}
-.tooltip:hover .tooltip-text-third{
-    opacity: 1;
-    visibility: visible;
-}
-.tooltip:hover .triangle-border-third{
-    opacity: 1;
-    visibility: visible;
 }
 .menu :nth-child(3){
     padding-left: 24px;
@@ -306,10 +291,10 @@ li::marker{
         width: 100%;
     }
     .menu :nth-child(3){
-        padding-left: 0;
+        padding-left: 0 !important;
     }
     .menu :nth-last-child(2){
-        padding-left: 0;
+        padding-left: 0 !important;
     }
     .menu li:nth-child(1){
         margin-top: 48px;
@@ -320,7 +305,7 @@ li::marker{
         height: 11px;
         padding: 7px 0px 16px 0px;
         bottom: 152%;
-        /* left: 50%; */
+        left: -40%;
         width: 16em;
         font-size: 16px;
     }
@@ -330,6 +315,7 @@ li::marker{
         border-top: 16px solid #ffffff;
         border-bottom: 0px solid #000000;
         top: -54%;
+        margin-left: 26px;
     }
     .tooltip-text-second{
         background: #ffffff;
@@ -337,7 +323,7 @@ li::marker{
         height: 11px;
         padding: 7px 0px 16px 0px;
         bottom: 152%;
-        /* left: 50%; */
+        left: -14%;
         width: 16em;
         font-size: 16px;
     }
@@ -347,6 +333,7 @@ li::marker{
         border-top: 16px solid #ffffff;
         border-bottom: 0px solid #000000;
         top: -54%;
+        margin-left: 43px;
     }
     .tooltip-text-third{
         background: #ffffff;
@@ -354,7 +341,7 @@ li::marker{
         height: 11px;
         padding: 7px 0px 16px 0px;
         bottom: 152%;
-        /* left: 50%; */
+        left: -68%;
         width: 16em;
         font-size: 16px;
     }
@@ -364,6 +351,7 @@ li::marker{
         border-bottom: 0px solid #000000;
         border-top: 16px solid #ffffff;
         top: -54%;
+        margin-left: 16px;
     }
 }
 @media screen and (min-width:768px) and (max-width:1023px) {
@@ -385,4 +373,34 @@ li::marker{
     .menu{
         top:68px;
     }
+}
+@media screen and (min-width:1024px) and (max-width:1279px) {
+
+       .Navigation-item{
+        justify-content: start;
+        gap: 18em;
+    }
+    .logo img{
+        width: 90%;
+    }
+    .tooltip-text-third{
+        bottom: -3.9em;
+        left: -124%;
+    }
+    .tooltip-text{
+        bottom: -3.9em;
+    }
+    .tooltip-text-second{
+        bottom: -3.9em;
+    }
+    .triangle-border{
+        top: 184%;
+    }
+    .triangle-border-second{
+        top: 184%;
+    }
+    .triangle-border-third{
+        top: 184%;
+    }
+
 }

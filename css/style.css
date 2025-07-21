@@ -7,7 +7,7 @@ body{
     /* padding-top: 160px; */
     text-align: center;
 }
-.Navigation-item{
+.navigation-item{
     /* width: 100%; */
     display: flex;
     justify-content: space-between;
@@ -164,7 +164,7 @@ li{
     overflow: hidden;
     transition: opacity 0.3s ease;
 }
-.Navigation-item :nth-child(1){
+.navigation-item :nth-child(1){
     list-style: none;
 }
 .menu :nth-child(1){
@@ -194,7 +194,7 @@ li::marker{
 .hamburger-bar{
     right: 4%;
     /* transform: translateY(-47%); */
-    top: 16px;
+    top: 14px;
 }
 #check{
     display: none;
@@ -231,10 +231,10 @@ li::marker{
         color: aliceblue;
     }
     .fa-bars{
-        font-size: 2.4em;
+        font-size: 1.6em;
     }
     .fa-xmark{
-        font-size: 2.8em;
+        font-size: 2em;
     }
     .tooltip-text{
         display: block;
@@ -251,7 +251,7 @@ li::marker{
         display: none;
         z-index: 1;
     }
-    .Navigation-item{
+    .navigation-item{
         /* width: 95%; */
         display: flex;
         justify-content: space-between;
@@ -266,7 +266,7 @@ li::marker{
     }
     li{
         color: white;
-        font-size: 42px;
+        font-size: 32px;
     }
     .hamburger-xmark, .hamburger-bar{
         display: block;
@@ -304,54 +304,54 @@ li::marker{
         background: #ffffff;
         color: #000000;
         height: 16px;
-        padding: 7px 0px 16px 0px;
-        bottom: 143%;
+        padding: 7px 0px 22px 0px;
+        bottom: 112%;
         left: -25%;
         width: 16em;
-        font-size: 20px;
+        font-size: 26px;
     }
     .triangle-border{
         border-left: 14px solid transparent;
         border-right: 14px solid transparent;
         border-top: 16px solid #ffffff;
         border-bottom: 0px solid #000000;
-        top: -44%;
+        top: -13%;
         margin-left: 39px;
     }
     .tooltip-text-second{
         background: #ffffff;
         color: #000000;
         height: 16px;
-        padding: 7px 0px 16px 0px;
-        bottom: 152%;
+        padding: 7px 0px 22px 0px;
+        bottom: 140%;
         left: -1%;
         width: 16em;
-        font-size: 20px;
+        font-size: 26px;
     }
     .triangle-border-second{
         border-left: 14px solid transparent;
         border-right: 14px solid transparent;
         border-top: 16px solid #ffffff;
         border-bottom: 0px solid #000000;
-        top: -54%;
-        margin-left: 63px;
+        top: -41%;
+        margin-left: 68px;
     }
     .tooltip-text-third{
         background: #ffffff;
         color: #000000;
         height: 16px;
-        padding: 7px 0px 16px 0px;
-        bottom: 142%;
+        padding: 7px 0px 22px 0px;
+        bottom: 130%;
         left: -43%;
         width: 16em;
-        font-size: 20px;
+        font-size: 26px;
     }
     .triangle-border-third{
         border-left: 14px solid transparent;
         border-right: 14px solid transparent;
         border-bottom: 0px solid #000000;
         border-top: 16px solid #ffffff;
-        top: -43%;
+        top: -31%;
         margin-left: 28px;
     }
 }
@@ -366,18 +366,21 @@ li::marker{
         opacity: 0;
     }
     .fa-bars{
-        font-size: 2em;
+        font-size: 2.8em;
     }
     .fa-xmark{
-        font-size: 2.4em;
+        font-size: 3em;
     }
     .menu{
         top:78px;
     }
+    li{
+        font-size: 48px !important;
+    }
 }
 @media screen and (min-width:1024px) and (max-width:1279px) {
 
-       .Navigation-item{
+    .navigation-item{
         justify-content: start;
         gap: 18em;
     }
